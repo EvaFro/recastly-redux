@@ -1,21 +1,12 @@
 import { connect } from 'react-redux';
 import VideoPlayer from '../components/VideoPlayer.js';
 
-
-const mapStateToProps = (state) => ({video: state.currentVideo});
-
-const mapDispatchToProps = (dispatch) => ({
-  handleVideoListEntryTitleClick: (video) => dispatch(changeVideo(video))
-})
-
-
-
-var VideoPlayerContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(VideoPlayer)
-
 //TODO: define a VideoPlayerContainer component which will hook up your action
 //dispatchers with your VideoPlayer component props.
+const mapStateToProps = (state) => ({video: state.currentVideo});
 
-export default VideoPlayerContainer;
+var VideoListContainer= connect(
+  mapStateToProps
+)(VideoPlayer)
+
+export default VideoListContainer;
