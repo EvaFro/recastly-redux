@@ -5,6 +5,7 @@ import searchYouTube from './lib/searchYouTube.js';
 import YOUTUBE_API_KEY from './config/youtube.js';
 import store from './store/store.js';
 //TODO: Import the Provider component from 'react-redux' here!
+import { Provider } from 'react-redux';
 
 import { Provider } from 'react-redux';
 
